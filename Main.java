@@ -38,7 +38,11 @@ public class Main{
         }
         System.out.println("PIXELS EXTRACTED");
 
-        //String pallete = "  `^,:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
+        /*
+        For Negative image use this pallete:
+        "  `^,:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"; 
+        */
+        
         String pallete = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~i!lI;:,^`  ";
 ; 
         for(int i=0; i<image_buffer.getHeight()* image_buffer.getWidth();i++){
