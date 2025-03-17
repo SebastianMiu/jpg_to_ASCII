@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Display</title>
+    <style>
+        body {
+            font-family: monospace;
+            white-space: pre-wrap;
+            background-color: #000;
+            color: #00ff0d;
+            font-size: 7px; /* You can adjust the font size based on how the ASCII looks */
+        }
+    </style>
+</head>
+<body>
+    <h1>Generated ASCII Art</h1>
+    <div id="ascii-output"></div>
+
+    <script>
+        // Function to load the content of the output.txt file
+        function loadASCII() {
+            fetch('output.txt')
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById('ascii-output').innerText = text;
+                })
+                .catch(error => {
+                    console.error('Error loading the ASCII output:', error);
+                });
+        }
+
+        // Load the ASCII art when the page loads
+        window.onload = loadASCII;
+    </script>
+</body>
+</html>
